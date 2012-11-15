@@ -8,21 +8,27 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using df_df.ScreenFramework;
+using df_df.ScreenFramework.Screens;
 
 namespace df_df
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        private GraphicsDeviceManager graphics;
+        private ScreenManager screenManager;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferHeight = 600;
-            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = GameUtil.windowHeight;
+            graphics.PreferredBackBufferWidth = GameUtil.windowWidth;
             this.IsMouseVisible = true;
+
+            screenManager = new ScreenManager(this, graphics);
+            Components.Add(screenManager);
+            screenManager.AddScreen(new TitleScreen());
         }
 
         protected override void Initialize()
@@ -30,24 +36,13 @@ namespace df_df
             base.Initialize();
         }
 
-        protected override void LoadContent()
-        {
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-        }
+        protected override void LoadContent() {}
 
         protected override void UnloadContent() {}
-        
-        protected override void Update(GameTime gameTime)
-        {
-            // this.Exit();
-
-            base.Update(gameTime);
-        }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.SpringGreen);
-
+            GraphicsDevice.Clear(Color.Black);
             base.Draw(gameTime);
         }
     }
