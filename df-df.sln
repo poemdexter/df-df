@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "df-df", "df-df\df-df\df-df.csproj", "{37C1FB8B-EEEA-4F60-8A0D-23383111E56B}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "df-dfContent", "df-df\df-dfContent\df-dfContent.contentproj", "{9159EBCA-5F2F-483A-82B4-E477EA582CE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37C1FB8B-EEEA-4F60-8A0D-23383111E56B}.Debug|x86.ActiveCfg = Debug|x86
+		{37C1FB8B-EEEA-4F60-8A0D-23383111E56B}.Debug|x86.Build.0 = Debug|x86
+		{37C1FB8B-EEEA-4F60-8A0D-23383111E56B}.Release|x86.ActiveCfg = Release|x86
+		{37C1FB8B-EEEA-4F60-8A0D-23383111E56B}.Release|x86.Build.0 = Release|x86
+		{9159EBCA-5F2F-483A-82B4-E477EA582CE3}.Debug|x86.ActiveCfg = Debug|x86
+		{9159EBCA-5F2F-483A-82B4-E477EA582CE3}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
