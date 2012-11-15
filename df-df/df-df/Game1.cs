@@ -20,6 +20,9 @@ namespace df_df
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = 800;
+            this.IsMouseVisible = true;
         }
 
         protected override void Initialize()
@@ -33,7 +36,7 @@ namespace df_df
         }
 
         protected override void UnloadContent() {}
-
+        
         protected override void Update(GameTime gameTime)
         {
             // this.Exit();
@@ -43,7 +46,7 @@ namespace df_df
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.SpringGreen);
 
             base.Draw(gameTime);
         }
